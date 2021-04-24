@@ -1,0 +1,23 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    username: root
+    password: chen151717
+    url: jdbc:mysql://localhost:3306/pro?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.zfcraft.web.model
+
+#  logging.config=classpath:log/logback-spring.xml
+logging:
+  path: D:/workcore/com.zfcraft.log/src/main/resources/logs
+  pattern:
+    console:  "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n"
+  file:
+    max-history: 90
+    max-size: 20Mb
+  level:

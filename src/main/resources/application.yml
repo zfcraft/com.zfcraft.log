@@ -1,0 +1,12 @@
+
+spring:
+  profiles:
+    active: dev
+
+
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug
