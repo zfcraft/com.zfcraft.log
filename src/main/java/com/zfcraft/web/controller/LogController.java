@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -23,6 +24,8 @@ import java.util.Map;
 public class LogController {
     @Autowired
     private AppLogService appLogService;
+    @Autowired
+    private RedisTemplate redisTemplate;
     private final Logger logger = LoggerFactory.getLogger(LogController.class);
 
     //    @Value("${file.upload.url}")
@@ -75,6 +78,10 @@ public class LogController {
 //        String keyword = (String) paramMap.get("keywordText");
 //        String startDate = (String) paramMap.get("startDate");
 //        String endDate = (String) paramMap.get("endDate");
+        String key="";
+        Object mobileCode = redisTemplate.opsForValue().get(key);
+        // 获取key过期时间
+//        Long keyExpire = redisTemplate.getExpire(key);
 
       appLogService.delete(appLog);
     }
