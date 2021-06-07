@@ -53,12 +53,31 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- runtime -->
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
+            <version>8.0.25</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.alibaba/druid-spring-boot-starter -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.2.6</version>
+        </dependency>
+
+        <!-- Shiro使用Spring框架 -->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+        </dependency>
+
+        <!-- thymeleaf模板引擎和shiro框架的整合 -->
+<!--        <dependency>-->
+<!--            <groupId>com.github.theborakompanioni</groupId>-->
+<!--            <artifactId>thymeleaf-extras-shiro</artifactId>-->
+<!--        </dependency>-->
         <!--<dependency>-->
         <!--<groupId>org.springframework.boot</groupId>-->
         <!--<artifactId>spring-boot-devtools</artifactId>-->
@@ -210,11 +229,13 @@
             <version>2.6</version>
         </dependency>
 
-        <!-- <dependency>
-           <groupId>org.apache.commons</groupId>
-           <artifactId>commons-lang3</artifactId>
-           <version>3.7</version>
-       </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
+        </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.apache.commons/org.apache.commons.collections -->
         <!--    <dependency>
